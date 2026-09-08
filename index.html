@@ -72,29 +72,20 @@ body {
   transition: border-color .15s, background .15s, color .15s; white-space: nowrap;
 }
 .btn-ctrl:hover { border-color: #6366f1; color: #6366f1; background: #f8f9ff; }
-/* Mode */
 .btn-ctrl.active            { background: #6366f1; border-color: #4f46e5; color: #fff; font-weight: 700; }
 #ctrlParticle.active        { background: #ea580c; border-color: #c2410c; }
-/* Chapter */
 .grp-chapter .btn-ctrl.active { background: #0891b2; border-color: #0e7490; }
-/* Pattern — dark green */
 .grp-pattern .btn-ctrl.active { background: #166534; border-color: #14532d; }
 
 /* ── INFO BANNERS ── */
 .info-banner {
   display: none; border-radius: 8px;
   padding: 8px 13px; font-size: .81rem;
-  margin-bottom: 12px; line-height: 1.5;
+  margin-bottom: 12px; line-height: 1.6;
 }
-.mode-hint {
-  background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #f97316; color: #7c2d12;
-}
-.exist-hint {
-  background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #16a34a; color: #14532d;
-}
-.motion-hint {
-  background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; color: #1e3a8a;
-}
+.mode-hint  { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #f97316; color: #7c2d12; }
+.exist-hint { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #16a34a; color: #14532d; }
+.motion-hint{ background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; color: #1e3a8a; }
 .p-eg {
   display: inline-block; background: #fff; border: 1.5px solid #fed7aa;
   border-radius: 5px; padding: 0 6px; font-weight: 700; color: #c2410c;
@@ -120,10 +111,7 @@ body {
   font-size: .66rem; font-weight: 800; text-transform: uppercase;
   letter-spacing: 1.5px; color: #6366f1;
 }
-.sent-type {
-  font-size: .66rem; font-weight: 700; margin-top: 2px;
-  color: #64748b; letter-spacing: .3px;
-}
+.sent-type { font-size: .68rem; font-weight: 700; margin-top: 2px; color: #64748b; letter-spacing: .3px; }
 .prompt-en {
   font-size: 1.08rem; color: #1e293b; line-height: 1.5;
   transition: filter .35s ease; min-height: 1.6em;
@@ -149,8 +137,7 @@ body {
 .ans-zone {
   min-height: 64px; border: 2px dashed #cbd5e1; border-radius: 11px;
   padding: 10px 13px; display: flex; flex-wrap: wrap;
-  gap: 8px; align-items: center;
-  background: #fafafa; margin-bottom: 12px;
+  gap: 8px; align-items: center; background: #fafafa; margin-bottom: 12px;
   transition: border-color .25s, background .25s;
 }
 .ans-zone.filled  { border-style: solid; border-color: #94a3b8; }
@@ -169,9 +156,8 @@ body {
 /* ── TILES ── */
 .tile {
   display: inline-flex; align-items: center;
-  padding: 8px 13px; border-radius: 9px;
-  cursor: pointer; font-size: 1rem; font-weight: 700;
-  border: 2px solid transparent;
+  padding: 8px 13px; border-radius: 9px; cursor: pointer;
+  font-size: 1rem; font-weight: 700; border: 2px solid transparent;
   transition: transform .12s, box-shadow .12s;
   user-select: none; white-space: nowrap; letter-spacing: .3px;
 }
@@ -208,12 +194,12 @@ body {
   50%      { box-shadow: 0 0 0 8px rgba(249,115,22,0);   }
 }
 
-/* "?" badge on bank tiles in particle mode */
+/* Bank badge in particle mode */
 .p-badge {
-  display: inline-block; margin-left: 5px;
-  font-size: .55em; background: #f97316; color: #fff;
-  border-radius: 50%; width: 14px; height: 14px;
-  text-align: center; line-height: 14px; font-weight: 800; flex-shrink: 0;
+  display: inline-block; margin-left: 5px; font-size: .55em;
+  background: #f97316; color: #fff; border-radius: 50%;
+  width: 14px; height: 14px; text-align: center; line-height: 14px;
+  font-weight: 800; flex-shrink: 0;
 }
 
 /* ── PARTICLE CHALLENGE ── */
@@ -221,9 +207,8 @@ body {
 
 .p-select {
   height: 38px; padding: 4px 20px 4px 9px;
-  border-radius: 7px; border: 2px solid;
-  background-color: #fff; cursor: pointer;
-  font-size: .92rem; font-weight: 700; font-family: inherit;
+  border-radius: 7px; border: 2px solid; background-color: #fff;
+  cursor: pointer; font-size: .92rem; font-weight: 700; font-family: inherit;
   -webkit-appearance: none; appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2364748b'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 6px center; background-size: 8px 5px;
@@ -232,9 +217,11 @@ body {
 .p-select:focus { outline: 2px solid #6366f1; outline-offset: 2px; }
 .p-select:disabled { cursor: default; opacity: .92; }
 
-.p-select.pt-time  { border-color: #fde68a; color: #b45309; }
-.p-select.pt-place { border-color: #bbf7d0; color: #166534; }
-.p-select.pt-obj   { border-color: #fecdd3; color: #be123c; }
+.p-select.pt-time    { border-color: #fde68a; color: #b45309; }
+.p-select.pt-place   { border-color: #bbf7d0; color: #166534; }
+.p-select.pt-obj     { border-color: #fecdd3; color: #be123c; }
+/* Subject が dropdown uses topic blue */
+.p-select.pt-topic   { border-color: #bfdbfe; color: #1d4ed8; }
 
 .p-select.p-ok  { border-color: #22c55e !important; background-color: #f0fdf4; color: #15803d; }
 .p-select.p-bad { border-color: #ef4444 !important; background-color: #fff5f5; color: #b91c1c; }
@@ -312,7 +299,7 @@ rt {
   font-size: .82rem; color: #166534; margin: 6px 0;
 }
 
-/* ── PARTICLE DETAIL TABLE ── */
+/* ── PARTICLE DETAIL ── */
 .pd-block {
   margin: 10px 0; background: #fff;
   border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;
@@ -348,13 +335,8 @@ rt {
   display: flex; gap: 12px; padding: 7px 13px;
   border-top: 1px solid #f1f5f9; font-size: .83rem; align-items: flex-start;
 }
-.gram-jp   {
-  font-weight: 800; color: #0f172a; min-width: 100px; flex-shrink: 0;
-  font-size: .95rem; line-height: 2;
-}
+.gram-jp   { font-weight: 800; color: #0f172a; min-width: 100px; flex-shrink: 0; font-size: .95rem; line-height: 2; }
 .gram-note { color: #475569; padding-top: 2px; }
-
-/* Highlight important rule text within notes */
 .gram-note strong { color: #1e293b; }
 .gram-note .note-alt {
   display: block; margin-top: 4px; font-size: .78rem;
@@ -391,7 +373,6 @@ rt {
 
   <!-- ══ CONTROLS ══ -->
   <div class="controls">
-    <!-- Mode -->
     <div class="ctrl-group">
       <span class="ctrl-lbl">Mode</span>
       <button class="btn-ctrl" id="ctrlNormal"   onclick="setMode('normal')"
@@ -399,7 +380,6 @@ rt {
       <button class="btn-ctrl" id="ctrlParticle" onclick="setMode('particle')"
         title="Also choose the correct particle for each tile">🎯 Particle Challenge</button>
     </div>
-    <!-- Chapter -->
     <div class="ctrl-group grp-chapter">
       <span class="ctrl-lbl">Chapters</span>
       <button class="btn-ctrl" id="ctrlCh12" onclick="setChapter('1-2')"
@@ -409,17 +389,16 @@ rt {
       <button class="btn-ctrl" id="ctrlCh69" onclick="setChapter('6-9')"
         title="Adds past forms (ました / ませんでした)">Ch 6–9</button>
     </div>
-    <!-- Sentence Pattern 文型 -->
     <div class="ctrl-group grp-pattern">
       <span class="ctrl-lbl">文型 Pattern</span>
       <button class="btn-ctrl" id="ctrlAll"       onclick="setPattern('all')"
         title="Random mix of all sentence patterns">全部 All</button>
       <button class="btn-ctrl" id="ctrlAction"    onclick="setPattern('action')"
-        title="Action verbs: eat, drink, read, write, buy, etc.">動作 Action</button>
+        title="Action verbs: eat, drink, read, write, buy…">動作 Action</button>
       <button class="btn-ctrl" id="ctrlMotion"    onclick="setPattern('motion')"
         title="Motion verbs: 行く / 来る / 帰る / 出かける">移動 Motion</button>
       <button class="btn-ctrl" id="ctrlExistence" onclick="setPattern('existence')"
-        title="Existence verbs: います (animate) / あります (inanimate)">存在 Existence</button>
+        title="います (animate) / あります (inanimate) — が marks the subject">存在 Existence</button>
     </div>
   </div>
 
@@ -433,21 +412,24 @@ rt {
   <div class="info-banner motion-hint" id="motionHint">
     🏃 <strong>Motion sentences:</strong>
     <strong>行く / 来る / 帰る / 出かける</strong> use <strong>に</strong> (or へ) to mark the
-    <em>destination</em> → 「[place]に 行きます」. Compare: action verbs use <strong>で</strong>
-    for the <em>location</em> of an action.
+    <em>destination</em> → 「[Place]に 行きます」.
+    Compare: action verbs use <strong>で</strong> for the <em>location of an action</em>.
   </div>
 
   <div class="info-banner exist-hint" id="existHint">
-    📍 <strong>Existence sentences:</strong>
-    <strong>います</strong> (people &amp; animals) and <strong>あります</strong> (things) use
-    <strong>に</strong> to mark <em>location</em> → 「[place]に います/あります」.
-    <br>⚠️ Unlike action verbs (で) and motion verbs (に = destination), に here means
-    <em>where something/someone exists</em>.
+    📍 <strong>Existence sentences — 「[Place]に [Subject]が います / あります」</strong><br>
+    • <strong>が</strong> marks the <em>subject</em> (the entity that exists at the location).<br>
+    • <strong>に</strong> marks the <em>location</em> — always に, never で.<br>
+    • <strong>います</strong> = animate beings (people, animals) ／
+      <strong>あります</strong> = inanimate things (objects).<br>
+    • Both 「[Place]に [Subject]が」 and 「[Subject]が [Place]に」 word orders are accepted.<br>
+    • ⚠️ <strong>たいてい</strong> is not used with existence sentences
+      (existence is a state, not a habitual action).
   </div>
 
   <!-- ══ COLOUR LEGEND ══ -->
   <div class="legend">
-    <div class="leg"><div class="leg-dot" style="background:#bfdbfe"></div>Topic は</div>
+    <div class="leg"><div class="leg-dot" style="background:#bfdbfe"></div>Topic は / Subject が</div>
     <div class="leg"><div class="leg-dot" style="background:#fde68a"></div>Time に/ø</div>
     <div class="leg"><div class="leg-dot" style="background:#ddd6fe"></div>Frequency</div>
     <div class="leg"><div class="leg-dot" style="background:#bbf7d0"></div>Place で/に</div>
@@ -498,7 +480,7 @@ rt {
    VOCABULARY  — Genki I Ch 0–9
 ════════════════════════════════════════════════════════════════ */
 
-/* Animate subjects — for all action/motion sentences AND います sentences */
+/* Animate subjects — used for action, motion, and います sentences */
 const SUBJECTS = [
   { jp:'私',           r:'<ruby>私<rt>わたし</rt></ruby>',           en:'I',           isFirst:true  },
   { jp:'田中さん',     r:'<ruby>田中<rt>たなか</rt></ruby>さん',     en:'Tanaka-san',  isFirst:false },
@@ -509,24 +491,23 @@ const SUBJECTS = [
 
 /* Inanimate subjects — used exclusively for あります sentences */
 const SUBJECTS_INANIMATE = [
-  { jp:'本',      r:'<ruby>本<rt>ほん</rt></ruby>',             en:'the book',      isFirst:false },
-  { jp:'さいふ',  r:'さいふ',                                    en:'the wallet',    isFirst:false },
-  { jp:'かばん',  r:'かばん',                                    en:'the bag',       isFirst:false },
-  { jp:'でんわ',  r:'でんわ',                                    en:'the phone',     isFirst:false },
-  { jp:'ざっし',  r:'ざっし',                                    en:'the magazine',  isFirst:false },
-  { jp:'めがね',  r:'めがね',                                    en:'the glasses',   isFirst:false },
-  { jp:'かさ',    r:'かさ',                                      en:'the umbrella',  isFirst:false },
-  { jp:'パソコン',r:'パソコン',                                   en:'the laptop',    isFirst:false },
-  { jp:'しんぶん',r:'しんぶん',                                   en:'the newspaper', isFirst:false },
-  { jp:'くるま',  r:'くるま',                                    en:'the car',       isFirst:false },
+  { jp:'本',      r:'<ruby>本<rt>ほん</rt></ruby>',       en:'the book',      isFirst:false },
+  { jp:'さいふ',  r:'さいふ',                             en:'the wallet',    isFirst:false },
+  { jp:'かばん',  r:'かばん',                             en:'the bag',       isFirst:false },
+  { jp:'でんわ',  r:'でんわ',                             en:'the phone',     isFirst:false },
+  { jp:'ざっし',  r:'ざっし',                             en:'the magazine',  isFirst:false },
+  { jp:'めがね',  r:'めがね',                             en:'the glasses',   isFirst:false },
+  { jp:'かさ',    r:'かさ',                               en:'the umbrella',  isFirst:false },
+  { jp:'パソコン',r:'パソコン',                           en:'the laptop',    isFirst:false },
+  { jp:'しんぶん',r:'しんぶん',                           en:'the newspaper', isFirst:false },
+  { jp:'くるま',  r:'くるま',                             en:'the car',       isFirst:false },
 ];
 
 /*
   VERBS — action and motion verbs.
-  isMotion:true  → verb belongs to the 移動 Motion pattern filter.
-  motion:true    → place particle is に (destination).
-  motion:false   → place particle is で (action location).
-  noPlace:true   → sentence never receives a place tile.
+  isMotion  = belongs to the 移動 Motion pattern.
+  motion    = place particle is に (destination); false = で (action location).
+  noPlace   = sentence never gets a place tile.
 */
 const VERBS = [
   { jp:'行きます',   r:'<ruby>行<rt>い</rt></ruby>きます',
@@ -543,25 +524,25 @@ const VERBS = [
     motion:false, isMotion:true,  hasObj:false, noPlace:true  },
   { jp:'食べます',   r:'<ruby>食<rt>た</rt></ruby>べます',
     en:'eat',         en3sg:'eats',          enPast:'ate',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'food'       },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'food'      },
   { jp:'飲みます',   r:'<ruby>飲<rt>の</rt></ruby>みます',
     en:'drink',       en3sg:'drinks',        enPast:'drank',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'drink'      },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'drink'     },
   { jp:'見ます',     r:'<ruby>見<rt>み</rt></ruby>ます',
     en:'watch',       en3sg:'watches',       enPast:'watched',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'watchable'  },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'watchable' },
   { jp:'聞きます',   r:'<ruby>聞<rt>き</rt></ruby>きます',
     en:'listen to',   en3sg:'listens to',    enPast:'listened to',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'listenable' },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'listenable'},
   { jp:'読みます',   r:'<ruby>読<rt>よ</rt></ruby>みます',
     en:'read',        en3sg:'reads',         enPast:'read',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'readable'   },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'readable'  },
   { jp:'書きます',   r:'<ruby>書<rt>か</rt></ruby>きます',
     en:'write',       en3sg:'writes',        enPast:'wrote',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'writable'   },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'writable'  },
   { jp:'買います',   r:'<ruby>買<rt>か</rt></ruby>います',
     en:'buy',         en3sg:'buys',          enPast:'bought',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'buyable'    },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'buyable'   },
   { jp:'起きます',   r:'<ruby>起<rt>お</rt></ruby>きます',
     en:'wake up',     en3sg:'wakes up',      enPast:'woke up',
     motion:false, isMotion:false, hasObj:false, noPlace:true  },
@@ -570,59 +551,41 @@ const VERBS = [
     motion:false, isMotion:false, hasObj:false, noPlace:true  },
   { jp:'します',     r:'します',
     en:'do',          en3sg:'does',          enPast:'did',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'activity'   },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'activity'  },
   { jp:'話します',   r:'<ruby>話<rt>はな</rt></ruby>します',
     en:'speak',       en3sg:'speaks',        enPast:'spoke',
-    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'language'   },
+    motion:false, isMotion:false, hasObj:true,  noPlace:false, cat:'language'  },
 ];
 
 /*
   EXIST_VERBS — います (animate) and あります (inanimate).
-  jpStem / rStem: the base before ます conjugation suffix.
-  Place particle for existence is ALWAYS に (location).
-  animate:true  → subject drawn from SUBJECTS pool.
-  animate:false → subject drawn from SUBJECTS_INANIMATE pool.
+  Existence sentences use が for the subject and に for the location.
+  Canonical pattern: 「[Place]に [Subject]が います/あります」
+  Both 「[Place]に [Subject]が」 and 「[Subject]が [Place]に」 orderings are valid.
 */
 const EXIST_VERBS = [
-  {
-    jpStem: 'い',   rStem: 'い',
-    jp: 'います',   r: 'います',
-    animate: true,  isExistence: true,
-    en: 'am/is (animate)',
-  },
-  {
-    jpStem: 'あり', rStem: 'あり',
-    jp: 'あります', r: 'あります',
-    animate: false, isExistence: true,
-    en: 'is (inanimate)',
-  },
+  { jpStem:'い',   rStem:'い',   jp:'います',   r:'います',   animate:true,  isExistence:true },
+  { jpStem:'あり', rStem:'あり', jp:'あります', r:'あります', animate:false, isExistence:true },
 ];
 
-/*
-  PLACES — skipMotion:true prevents a place from being used as a
-  motion-verb destination (うちに行く is odd; use 帰る instead).
-  For existence sentences, ALL places are valid (うちにいます ✓).
-*/
 const PLACES = [
-  { jp:'大学',       r:'<ruby>大学<rt>だいがく</rt></ruby>',       en:'the university'                          },
-  { jp:'図書館',     r:'<ruby>図書館<rt>としょかん</rt></ruby>',   en:'the library'                             },
-  { jp:'食堂',       r:'<ruby>食堂<rt>しょくどう</rt></ruby>',     en:'the cafeteria'                           },
-  { jp:'うち',       r:'うち',                                      en:'home', atEn:'at home', skipMotion:true   },
-  { jp:'駅',         r:'<ruby>駅<rt>えき</rt></ruby>',             en:'the station'                             },
-  { jp:'デパート',   r:'デパート',                                  en:'the department store'                    },
-  { jp:'レストラン', r:'レストラン',                                en:'the restaurant'                          },
-  { jp:'スーパー',   r:'スーパー',                                  en:'the supermarket'                         },
-  { jp:'コンビニ',   r:'コンビニ',                                  en:'the convenience store'                   },
-  { jp:'カフェ',     r:'カフェ',                                    en:'the café'                               },
-  { jp:'教室',       r:'<ruby>教室<rt>きょうしつ</rt></ruby>',     en:'the classroom'                           },
-  { jp:'公園',       r:'<ruby>公園<rt>こうえん</rt></ruby>',       en:'the park'                                },
+  { jp:'大学',       r:'<ruby>大学<rt>だいがく</rt></ruby>',       en:'the university'                         },
+  { jp:'図書館',     r:'<ruby>図書館<rt>としょかん</rt></ruby>',   en:'the library'                            },
+  { jp:'食堂',       r:'<ruby>食堂<rt>しょくどう</rt></ruby>',     en:'the cafeteria'                          },
+  { jp:'うち',       r:'うち',                                      en:'home', atEn:'at home', skipMotion:true  },
+  { jp:'駅',         r:'<ruby>駅<rt>えき</rt></ruby>',             en:'the station'                            },
+  { jp:'デパート',   r:'デパート',                                  en:'the department store'                   },
+  { jp:'レストラン', r:'レストラン',                                en:'the restaurant'                         },
+  { jp:'スーパー',   r:'スーパー',                                  en:'the supermarket'                        },
+  { jp:'コンビニ',   r:'コンビニ',                                  en:'the convenience store'                  },
+  { jp:'カフェ',     r:'カフェ',                                    en:'the café'                              },
+  { jp:'教室',       r:'<ruby>教室<rt>きょうしつ</rt></ruby>',     en:'the classroom'                          },
+  { jp:'公園',       r:'<ruby>公園<rt>こうえん</rt></ruby>',       en:'the park'                               },
 ];
 
-/*
-  TIMES — ni:true = specific clock/calendar time → requires に
-           ni:false = relative/habitual time      → NO particle
-  RULE: relative times (ni:false) MUST NOT co-occur with frequency adverbs.
-*/
+/* ni:true = specific clock/calendar time → requires に
+   ni:false = relative/habitual time       → NO particle
+   RULE: relative times (ni:false) MUST NOT appear with frequency adverbs. */
 const TIMES = [
   { jp:'六時',   r:'<ruby>六時<rt>ろくじ</rt></ruby>',             en:'at 6:00',       ni:true  },
   { jp:'七時',   r:'<ruby>七時<rt>しちじ</rt></ruby>',             en:'at 7:00',       ni:true  },
@@ -647,7 +610,9 @@ const TIMES = [
   { jp:'今',     r:'<ruby>今<rt>いま</rt></ruby>',                 en:'right now',     ni:false },
 ];
 
-/* Positive frequency adverbs — work with any verb form */
+/* Positive frequency adverbs.
+   RULE: たいてい is excluded from existence sentences (existence is a state,
+   not a habitual routine — the adverb would be semantically awkward). */
 const FREQS_POS = [
   { jp:'時々',     r:'<ruby>時々<rt>ときどき</rt></ruby>', en:'sometimes', negOnly:false,
     note:'時々 (sometimes) — frequency adverb. No particle.' },
@@ -659,10 +624,8 @@ const FREQS_POS = [
     note:'いつも (always) — frequency adverb. No particle.' },
 ];
 
-/*
-  Negative-only adverbs — MUST appear with negative verb forms only.
-  enSuffix is placed at the END of the English prompt for natural phrasing.
-*/
+/* Negative-only adverbs — MUST co-occur with a negative verb form.
+   enSuffix is placed at the END of the English prompt for natural phrasing. */
 const FREQS_NEG = [
   { jp:'あまり',   r:'あまり',   en:'not very often', enSuffix:'very often', negOnly:true,
     note:'あまり～ません = "not very often/much". Must be used with a negative verb form.' },
@@ -672,49 +635,48 @@ const FREQS_NEG = [
 
 const OBJECTS = {
   food:      [
-    {jp:'ごはん',         r:'ごはん',         en:'rice'       }, {jp:'パン',       r:'パン',       en:'bread'      },
-    {jp:'すし',           r:'すし',           en:'sushi'      }, {jp:'てんぷら',   r:'てんぷら',   en:'tempura'    },
-    {jp:'ラーメン',       r:'ラーメン',       en:'ramen'      }, {jp:'ピザ',       r:'ピザ',       en:'pizza'      },
-    {jp:'サラダ',         r:'サラダ',         en:'a salad'    },
+    {jp:'ごはん',         r:'ごはん',         en:'rice'      }, {jp:'パン',       r:'パン',       en:'bread'      },
+    {jp:'すし',           r:'すし',           en:'sushi'     }, {jp:'てんぷら',   r:'てんぷら',   en:'tempura'    },
+    {jp:'ラーメン',       r:'ラーメン',       en:'ramen'     }, {jp:'ピザ',       r:'ピザ',       en:'pizza'      },
+    {jp:'サラダ',         r:'サラダ',         en:'a salad'   },
   ],
   drink:     [
-    {jp:'コーヒー',       r:'コーヒー',       en:'coffee'     }, {jp:'おちゃ',     r:'おちゃ',     en:'green tea'  },
-    {jp:'みず',           r:'みず',           en:'water'      }, {jp:'ジュース',   r:'ジュース',   en:'juice'      },
-    {jp:'ビール',         r:'ビール',         en:'beer'       }, {jp:'コーラ',     r:'コーラ',     en:'cola'       },
+    {jp:'コーヒー',       r:'コーヒー',       en:'coffee'    }, {jp:'おちゃ',     r:'おちゃ',     en:'green tea'  },
+    {jp:'みず',           r:'みず',           en:'water'     }, {jp:'ジュース',   r:'ジュース',   en:'juice'      },
+    {jp:'ビール',         r:'ビール',         en:'beer'      }, {jp:'コーラ',     r:'コーラ',     en:'cola'       },
   ],
   watchable: [
-    {jp:'テレビ',         r:'テレビ',         en:'TV'         }, {jp:'えいが',     r:'えいが',     en:'a movie'    },
-    {jp:'アニメ',         r:'アニメ',         en:'anime'      }, {jp:'ニュース',   r:'ニュース',   en:'the news'   },
+    {jp:'テレビ',         r:'テレビ',         en:'TV'        }, {jp:'えいが',     r:'えいが',     en:'a movie'    },
+    {jp:'アニメ',         r:'アニメ',         en:'anime'     }, {jp:'ニュース',   r:'ニュース',   en:'the news'   },
   ],
   listenable:[
-    {jp:'おんがく',       r:'おんがく',       en:'music'      }, {jp:'ラジオ',     r:'ラジオ',     en:'the radio'  },
-    {jp:'ポッドキャスト', r:'ポッドキャスト', en:'a podcast'  },
+    {jp:'おんがく',       r:'おんがく',       en:'music'     }, {jp:'ラジオ',     r:'ラジオ',     en:'the radio'  },
+    {jp:'ポッドキャスト', r:'ポッドキャスト', en:'a podcast' },
   ],
   readable:  [
-    {jp:'ほん',           r:'ほん',           en:'a book'     }, {jp:'しんぶん',   r:'しんぶん',   en:'a newspaper'},
-    {jp:'まんが',         r:'まんが',         en:'manga'      }, {jp:'メール',     r:'メール',     en:'email'      },
+    {jp:'ほん',           r:'ほん',           en:'a book'    }, {jp:'しんぶん',   r:'しんぶん',   en:'a newspaper'},
+    {jp:'まんが',         r:'まんが',         en:'manga'     }, {jp:'メール',     r:'メール',     en:'email'      },
   ],
   writable:  [
-    {jp:'てがみ',         r:'てがみ',         en:'a letter'   }, {jp:'レポート',   r:'レポート',   en:'a report'   },
-    {jp:'メール',         r:'メール',         en:'an email'   }, {jp:'かんじ',     r:'かんじ',     en:'kanji'      },
+    {jp:'てがみ',         r:'てがみ',         en:'a letter'  }, {jp:'レポート',   r:'レポート',   en:'a report'   },
+    {jp:'メール',         r:'メール',         en:'an email'  }, {jp:'かんじ',     r:'かんじ',     en:'kanji'      },
   ],
   buyable:   [
-    {jp:'ほん',           r:'ほん',           en:'a book'     }, {jp:'ざっし',     r:'ざっし',     en:'a magazine' },
-    {jp:'くだもの',       r:'くだもの',       en:'fruit'      }, {jp:'みやげ',     r:'みやげ',     en:'souvenirs'  },
-    {jp:'ケーキ',         r:'ケーキ',         en:'a cake'     },
+    {jp:'ほん',           r:'ほん',           en:'a book'    }, {jp:'ざっし',     r:'ざっし',     en:'a magazine' },
+    {jp:'くだもの',       r:'くだもの',       en:'fruit'     }, {jp:'みやげ',     r:'みやげ',     en:'souvenirs'  },
+    {jp:'ケーキ',         r:'ケーキ',         en:'a cake'    },
   ],
   language:  [
-    {jp:'にほんご',       r:'にほんご',       en:'Japanese'   }, {jp:'えいご',     r:'えいご',     en:'English'    },
+    {jp:'にほんご',       r:'にほんご',       en:'Japanese'  }, {jp:'えいご',     r:'えいご',     en:'English'    },
   ],
   activity:  [
-    {jp:'テニス',         r:'テニス',         en:'tennis'     }, {jp:'サッカー',   r:'サッカー',   en:'soccer'     },
-    {jp:'バスケ',         r:'バスケ',         en:'basketball' }, {jp:'かいもの',   r:'かいもの',   en:'shopping'   },
-    {jp:'しゅくだい',     r:'しゅくだい',     en:'homework'   }, {jp:'りょうり',   r:'りょうり',   en:'cooking'    },
-    {jp:'そうじ',         r:'そうじ',         en:'cleaning'   }, {jp:'せんたく',   r:'せんたく',   en:'laundry'    },
+    {jp:'テニス',         r:'テニス',         en:'tennis'    }, {jp:'サッカー',   r:'サッカー',   en:'soccer'     },
+    {jp:'バスケ',         r:'バスケ',         en:'basketball'}, {jp:'かいもの',   r:'かいもの',   en:'shopping'   },
+    {jp:'しゅくだい',     r:'しゅくだい',     en:'homework'  }, {jp:'りょうり',   r:'りょうり',   en:'cooking'    },
+    {jp:'そうじ',         r:'そうじ',         en:'cleaning'  }, {jp:'せんたく',   r:'せんたく',   en:'laundry'    },
   ],
 };
 
-/* Verb form grammar notes shared across action/motion verb sentences */
 const VERB_FORM_NOTES = {
   pres_pos: 'ます — polite present/future positive. Verb always comes LAST.',
   pres_neg: 'ません — polite present/future negative. Verb always comes LAST.',
@@ -725,16 +687,11 @@ const VERB_FORM_NOTES = {
 /* All particles available in the particle-challenge dropdown */
 const ALL_PARTICLES = [
   { val:'',     lbl:'— (none)' },
-  { val:'は',   lbl:'は'   },
-  { val:'が',   lbl:'が'   },
-  { val:'を',   lbl:'を'   },
-  { val:'に',   lbl:'に'   },
-  { val:'で',   lbl:'で'   },
-  { val:'へ',   lbl:'へ'   },
-  { val:'と',   lbl:'と'   },
-  { val:'から', lbl:'から' },
-  { val:'まで', lbl:'まで' },
-  { val:'も',   lbl:'も'   },
+  { val:'は',   lbl:'は'   }, { val:'が',   lbl:'が'   },
+  { val:'を',   lbl:'を'   }, { val:'に',   lbl:'に'   },
+  { val:'で',   lbl:'で'   }, { val:'へ',   lbl:'へ'   },
+  { val:'と',   lbl:'と'   }, { val:'から', lbl:'から' },
+  { val:'まで', lbl:'まで' }, { val:'も',   lbl:'も'   },
   { val:'の',   lbl:'の'   },
 ];
 
@@ -756,7 +713,7 @@ const G = {
   enRevealed:    false,
   mode:          'normal',
   chapterLevel:  '1-2',
-  verbPattern:   'all',   // 'all' | 'action' | 'motion' | 'existence'
+  verbPattern:   'all',
 };
 
 /* ════════════════════════════════════════════════════════════════
@@ -780,7 +737,6 @@ function getAvailableForms(lvl) {
   return ['pres_pos', 'pres_neg', 'past_pos', 'past_neg'];
 }
 
-/* Conjugate action/motion verbs (all end in ます) */
 function conjugateVerb(v, form) {
   const stemJP   = v.jp.replace('ます', '');
   const stemRuby = (v.r || v.jp).replace('ます', '');
@@ -788,7 +744,6 @@ function conjugateVerb(v, form) {
   return { jp: stemJP + sfx[form], jpRuby: stemRuby + sfx[form] };
 }
 
-/* Build English verb phrase respecting subject person and tense */
 function buildEngVerb(v, form, subj) {
   switch (form) {
     case 'pres_pos': return subj.isFirst ? v.en : v.en3sg;
@@ -798,7 +753,6 @@ function buildEngVerb(v, form, subj) {
   }
 }
 
-/* Build English prompt for action/motion sentences */
 function buildEnglishAction(subj, v, form, freq, obj, place, time) {
   const vEng  = buildEngVerb(v, form, subj);
   const parts = [subj.en];
@@ -811,12 +765,12 @@ function buildEnglishAction(subj, v, form, freq, obj, place, time) {
   return parts.join(' ') + '.';
 }
 
-/* Readable label for a particle value */
 const displayParticle = p =>
   (p === null || p === undefined) ? '？' : (p === '' ? '—' : p);
 
 /* ════════════════════════════════════════════════════════════════
    SENTENCE GENERATOR — Action / Motion verbs
+   Canonical order: Topic は → Time → Freq → Place → Object → Verb
 ════════════════════════════════════════════════════════════════ */
 
 function makeActionSentence(verbPool) {
@@ -842,7 +796,7 @@ function makeActionSentence(verbPool) {
 
   const tiles = [];
 
-  /* 1 – Topic は (always first; not challenged in particle mode) */
+  /* 1 — Topic は (always first; not challenged) */
   const sR = subj.r || subj.jp;
   tiles.push({
     id:'topic', type:'topic',
@@ -853,7 +807,7 @@ function makeActionSentence(verbPool) {
     note: `は (wa) marks the sentence topic → 「${subj.jp}は」 = "${subj.en}". Always comes first.`,
   });
 
-  /* 2 – Time */
+  /* 2 — Time */
   if (time) {
     const p  = time.ni ? 'に' : '';
     const tR = time.r  || time.jp;
@@ -869,25 +823,25 @@ function makeActionSentence(verbPool) {
     });
   }
 
-  /* 3 – Frequency adverb (no particle; not challenged) */
+  /* 3 — Frequency adverb (no particle; not challenged) */
   if (freq) {
     const fR = freq.r || freq.jp;
     tiles.push({
       id:'freq', type:'freq',
-      jp:         freq.jp,  jpBase:     freq.jp,
-      jpRuby:     fR,       jpBaseRuby: fR,
+      jp: freq.jp, jpBase: freq.jp,
+      jpRuby: fR,  jpBaseRuby: fR,
       pChar:'', pOptions:[],
       enL: freq.en,
       note: freq.note,
     });
   }
 
-  /* 4 – Place (で for actions | に for motion) */
+  /* 4 — Place (で action | に motion destination) */
   if (place) {
     const plR  = place.r || place.jp;
     const pOpts = pp === 'に'
-      ? ['で', 'に', 'へ', '']   // correct: に
-      : ['に', 'で', 'へ', ''];  // correct: で
+      ? ['で', 'に', 'へ', '']
+      : ['に', 'で', 'へ', ''];
     tiles.push({
       id:'place', type:'place',
       jp:         place.jp + pp,  jpBase:     place.jp,
@@ -896,14 +850,13 @@ function makeActionSentence(verbPool) {
       enL: verb.motion ? `to ${place.en}` : (place.atEn || `at ${place.en}`),
       note: verb.motion
         ? `に marks the DESTINATION with motion verbs → 「${place.jp}に${conjV.jp}」. ` +
-          `(へ also accepted as an alternative for direction.) ` +
-          `Compare: action verbs use で for the location of an action.`
+          `(へ also accepted for direction.) Compare: action verbs use で for location.`
         : `で marks WHERE the action TAKES PLACE → 「${place.jp}で${conjV.jp}」. ` +
           `Compare: existence/motion verbs use に for location/destination.`,
     });
   }
 
-  /* 5 – Direct object を */
+  /* 5 — Direct object を */
   if (obj) {
     const oR = obj.r || obj.jp;
     tiles.push({
@@ -916,7 +869,7 @@ function makeActionSentence(verbPool) {
     });
   }
 
-  /* 6 – Verb (always last; not challenged) */
+  /* 6 — Verb (always last; not challenged) */
   tiles.push({
     id:'verb', type:'verb',
     jp:         conjV.jp,       jpBase:     conjV.jp,
@@ -927,57 +880,59 @@ function makeActionSentence(verbPool) {
   });
 
   return {
-    tiles,
-    shuffled:    shuffle([...tiles]),
-    eng:         buildEnglishAction(subj, verb, form, freq, obj, place, time),
-    isNeg,
-    isExistence: false,
-    sentType:    verb.isMotion ? 'motion' : 'action',
+    tiles, shuffled: shuffle([...tiles]),
+    eng: buildEnglishAction(subj, verb, form, freq, obj, place, time),
+    isNeg, isExistence: false,
+    sentType: verb.isMotion ? 'motion' : 'action',
   };
 }
 
 /* ════════════════════════════════════════════════════════════════
    SENTENCE GENERATOR — Existence verbs (います / あります)
+   Canonical order: Time → Freq → Place に → Subject が → Verb
+
+   KEY RULES:
+   • が marks the SUBJECT (entity that exists) — challengeable in particle mode
+   • に marks the LOCATION (never で, never へ)
+   • Both 「[Place]に [Subject]が」 and 「[Subject]が [Place]に」 accepted (full score)
+   • たいてい excluded: existence is a state, not a habitual action
 ════════════════════════════════════════════════════════════════ */
 
 function makeExistenceSentence() {
-  const ev     = rnd(EXIST_VERBS);
-  /* います uses animate subjects; あります uses inanimate objects */
-  const subj   = ev.animate ? rnd(SUBJECTS) : rnd(SUBJECTS_INANIMATE);
+  const ev   = rnd(EXIST_VERBS);
+  /* います → animate subjects; あります → inanimate subjects */
+  const subj = ev.animate ? rnd(SUBJECTS) : rnd(SUBJECTS_INANIMATE);
 
-  const forms  = getAvailableForms(G.chapterLevel);
-  const form   = rnd(forms);
-  const isNeg  = form.endsWith('_neg');
+  const forms = getAvailableForms(G.chapterLevel);
+  const form  = rnd(forms);
+  const isNeg = form.endsWith('_neg');
 
-  const sfx    = { pres_pos:'ます', pres_neg:'ません', past_pos:'ました', past_neg:'ませんでした' };
-  const conjJP    = ev.jpStem + sfx[form];
-  const conjRuby  = ev.rStem  + sfx[form];
+  const sfx = { pres_pos:'ます', pres_neg:'ません', past_pos:'ました', past_neg:'ませんでした' };
+  const conjJP   = ev.jpStem + sfx[form];
+  const conjRuby = ev.rStem  + sfx[form];
 
-  const doFreq  = Math.random() < 0.40;
-  const doTime  = Math.random() < 0.60;
+  const doFreq = Math.random() < 0.40;
+  const doTime = Math.random() < 0.60;
 
-  /* Existence sentences almost always specify a location — force it */
-  const place   = rnd(PLACES);   /* all places valid, including うち */
+  /* Existence sentences almost always specify a location */
+  const place = rnd(PLACES);   /* all places valid — うちにいます ✓ */
 
   const timePool = doFreq ? TIMES.filter(t => t.ni) : TIMES;
   const time     = doTime ? rnd(timePool) : null;
-  const freqPool = isNeg  ? [...FREQS_POS, ...FREQS_NEG] : FREQS_POS;
-  const freq     = doFreq ? rnd(freqPool) : null;
+
+  /*
+    Exclude たいてい from existence sentences.
+    たいてい implies a habitual routine ("I usually do X"), which is
+    semantically odd with a static existence state. The other adverbs
+    (時々/よく/いつも) express how often one IS somewhere, which is natural.
+  */
+  const FREQS_EXIST = FREQS_POS.filter(f => f.jp !== 'たいてい');
+  const freqPool    = isNeg ? [...FREQS_EXIST, ...FREQS_NEG] : FREQS_EXIST;
+  const freq        = doFreq ? rnd(freqPool) : null;
 
   const tiles = [];
 
-  /* 1 – Topic は */
-  const sR = subj.r || subj.jp;
-  tiles.push({
-    id:'topic', type:'topic',
-    jp:         subj.jp + 'は',  jpBase:     subj.jp,
-    jpRuby:     sR + 'は',       jpBaseRuby: sR,
-    pChar:'は', pOptions:[],
-    enL: `${subj.en} (topic)`,
-    note: `は (wa) marks the sentence topic → 「${subj.jp}は」 = "${subj.en}". Always comes first.`,
-  });
-
-  /* 2 – Time */
+  /* 1 — Time (optional) */
   if (time) {
     const p  = time.ni ? 'に' : '';
     const tR = time.r  || time.jp;
@@ -993,50 +948,63 @@ function makeExistenceSentence() {
     });
   }
 
-  /* 3 – Frequency adverb */
+  /* 2 — Frequency adverb (no たいてい; no particle; not challenged) */
   if (freq) {
     const fR = freq.r || freq.jp;
     tiles.push({
       id:'freq', type:'freq',
-      jp:         freq.jp,  jpBase:     freq.jp,
-      jpRuby:     fR,       jpBaseRuby: fR,
+      jp: freq.jp, jpBase: freq.jp,
+      jpRuby: fR,  jpBaseRuby: fR,
       pChar:'', pOptions:[],
       enL: freq.en,
       note: freq.note,
     });
   }
 
-  /* 4 – Place に  (ALWAYS に for existence — NOT で, NOT へ) */
+  /* 3 — Place に
+     Existence verbs ALWAYS use に for the location — never で (action) or へ (direction).
+     に here answers "where does it/they exist?" not "where does the action happen?". */
   const plR = place.r || place.jp;
-  const sVerb = !subj.isFirst ? 's' : ''; // "exists" vs "exist"
   tiles.push({
     id:'place', type:'place',
     jp:         place.jp + 'に',  jpBase:     place.jp,
     jpRuby:     plR + 'に',       jpBaseRuby: plR,
     pChar:'に', pOptions:['で', 'に', 'へ', ''],
     enL: place.atEn || `at ${place.en}`,
-    note: `に marks WHERE ${subj.en} exist${sVerb} → 「${place.jp}に${conjJP}」. ` +
-          `⚠️ Existence verbs (います/あります) use に for LOCATION — never で. ` +
-          `で marks where an action happens; に here marks where something/someone IS.`,
+    note: `に marks the LOCATION of existence → 「${place.jp}に${conjJP}」. ` +
+          `⚠️ Existence verbs (います / あります) use に for location — <strong>never で</strong>. ` +
+          `で marks where an action takes place; に here answers "where does ${subj.en} exist?"`,
   });
 
-  /* 5 – Existence verb (always last; not challenged) */
-  const existNote = ev.animate
-    ? `${conjJP} — polite form of います (animate existence). ` +
-      `います = "is/am at [place]" for people and animals. ` +
-      `<strong>Use います for animate beings; use あります for inanimate things.</strong> ` +
-      `Verb always comes LAST.`
-    : `${conjJP} — polite form of あります (inanimate existence). ` +
-      `あります = "is at [place]" for objects and things. ` +
-      `<strong>Use あります for inanimate things; use います for people and animals.</strong> ` +
-      `Verb always comes LAST.`;
+  /* 4 — Subject が
+     が marks the entity that exists at the given location.
+     This tile IS challengeable in particle mode — students must distinguish
+     が (subject of an existence sentence) from は (topic marker).
+     pOptions start with wrong answers to make the student think. */
+  const sR = subj.r || subj.jp;
+  tiles.push({
+    id:'subject', type:'topic',   /* blue tile — grammatical subject */
+    jp:         subj.jp + 'が',  jpBase:     subj.jp,
+    jpRuby:     sR + 'が',       jpBaseRuby: sR,
+    pChar:'が', pOptions:['は', 'が', 'を', 'に', ''],
+    enL: `${subj.en} (subject)`,
+    note: `が marks the <strong>subject</strong> of the existence sentence — the entity that exists at the location. ` +
+          `「${place.jp}に ${subj.jp}が ${conjJP}」 = "${subj.en} is at ${place.en}". ` +
+          `が introduces ${subj.en} as new information. ` +
+          `<span class="note-alt">💡 Compare: は (topic marker) → 「${subj.jp}は ${place.jp}に ${conjJP}」 ` +
+          `creates a different TOPIC-COMMENT structure. Both are grammatical, but が is the standard existence pattern. ` +
+          `${ev.animate
+            ? 'います = animate beings (people, animals). Use あります for objects.'
+            : 'あります = inanimate things (objects). Use います for people and animals.'}</span>`,
+  });
 
+  /* 5 — Existence verb (always last; not challenged) */
   let enL_verb;
   switch (form) {
-    case 'pres_pos': enL_verb = subj.isFirst ? 'am (at)' : 'is (at)';         break;
-    case 'pres_neg': enL_verb = subj.isFirst ? 'am not (at)' : 'is not (at)'; break;
-    case 'past_pos': enL_verb = 'was (at)';                                    break;
-    case 'past_neg': enL_verb = 'was not (at)';                                break;
+    case 'pres_pos': enL_verb = ev.animate ? (subj.isFirst ? 'am' : 'is') : 'is';         break;
+    case 'pres_neg': enL_verb = ev.animate ? (subj.isFirst ? 'am not':'is not') :'is not'; break;
+    case 'past_pos': enL_verb = 'was';                                                     break;
+    case 'past_neg': enL_verb = 'was not';                                                 break;
   }
 
   tiles.push({
@@ -1045,32 +1013,31 @@ function makeExistenceSentence() {
     jpRuby:     conjRuby,    jpBaseRuby: conjRuby,
     pChar:'', pOptions:[],
     enL: enL_verb,
-    note: existNote,
+    note: ev.animate
+      ? `${conjJP} — polite form of <strong>います</strong> (animate existence: people, animals). ` +
+        `Use <strong>あります</strong> for inanimate objects. Verb always comes LAST.`
+      : `${conjJP} — polite form of <strong>あります</strong> (inanimate existence: objects). ` +
+        `Use <strong>います</strong> for animate beings. Verb always comes LAST.`,
   });
 
   /* English prompt */
-  let verbPart;
+  let verbEng;
   switch (form) {
-    case 'pres_pos': verbPart = subj.isFirst ? 'am'     : 'is';     break;
-    case 'pres_neg': verbPart = subj.isFirst ? 'am not' : 'is not'; break;
-    case 'past_pos': verbPart = 'was';                               break;
-    case 'past_neg': verbPart = 'was not';                           break;
+    case 'pres_pos': verbEng = ev.animate ? (subj.isFirst ? 'am' : 'is') : 'is';         break;
+    case 'pres_neg': verbEng = ev.animate ? (subj.isFirst ? 'am not':'is not') :'is not'; break;
+    case 'past_pos': verbEng = 'was';                                                     break;
+    case 'past_neg': verbEng = 'was not';                                                 break;
   }
-
-  const parts = [subj.en];
-  if (freq && !freq.negOnly) parts.push(freq.en);
-  parts.push(verbPart);
-  parts.push(place.atEn || `at ${place.en}`);
-  if (time)                 parts.push(time.en);
-  if (freq && freq.negOnly) parts.push(freq.enSuffix);
+  const engParts = [subj.en];
+  if (freq && !freq.negOnly) engParts.push(freq.en);
+  engParts.push(verbEng, place.atEn || `at ${place.en}`);
+  if (time) engParts.push(time.en);
+  if (freq && freq.negOnly) engParts.push(freq.enSuffix);
 
   return {
-    tiles,
-    shuffled:    shuffle([...tiles]),
-    eng:         parts.join(' ') + '.',
-    isNeg,
-    isExistence: true,
-    sentType:    'existence',
+    tiles, shuffled: shuffle([...tiles]),
+    eng: engParts.join(' ') + '.',
+    isNeg, isExistence: true, sentType: 'existence',
   };
 }
 
@@ -1079,48 +1046,70 @@ function makeExistenceSentence() {
 ════════════════════════════════════════════════════════════════ */
 
 function makeSentence() {
-  /* Existence pattern — always generate existence sentences */
   if (G.verbPattern === 'existence') return makeExistenceSentence();
-
-  /* All pattern — ~18% chance of an existence sentence */
   if (G.verbPattern === 'all' && Math.random() < 0.18) return makeExistenceSentence();
 
-  /* Select the verb pool based on the current pattern */
   let verbPool;
   switch (G.verbPattern) {
     case 'motion': verbPool = VERBS.filter(v =>  v.isMotion); break;
     case 'action': verbPool = VERBS.filter(v => !v.isMotion); break;
-    default:       verbPool = VERBS; break;  // 'all'
+    default:       verbPool = VERBS; break;
   }
   return makeActionSentence(verbPool);
 }
 
 /* ════════════════════════════════════════════════════════════════
    ORDER CHECKER
-   Returns: 'exact' | 'timeFreqSwap' | 'flex' | 'wrong'
-   timeFreqSwap — Time and Frequency are swapped but everything else
-   is canonical. Both orderings are grammatically valid in Japanese.
+   Returns: 'exact' | 'timeFreqSwap' | 'placeSubjSwap' | 'flex' | 'wrong'
+
+   timeFreqSwap  — Time and Frequency swapped; both orderings are natural → full score.
+   placeSubjSwap — Place に and Subject が swapped in an existence sentence;
+                   both 「[Place]に [Subject]が」 and 「[Subject]が [Place]に」
+                   are grammatically valid in Japanese → full score.
+   flex          — Topic first + Verb last (action/motion), or Verb last (existence),
+                   but middle elements out of canonical order → partial score.
 ════════════════════════════════════════════════════════════════ */
 
 function getOrderResult(sIds, cIds) {
   if (JSON.stringify(sIds) === JSON.stringify(cIds)) return 'exact';
 
-  const topicOk = sIds[0]             === cIds[0];
-  const verbOk  = sIds[sIds.length-1] === cIds[cIds.length-1];
-
-  /* Check if swapping Time ↔ Frequency produces the canonical order */
+  /* Check Time ↔ Frequency swap */
   const timeId = G.cur.tiles.find(t => t.type === 'time')?.id;
   const freqId = G.cur.tiles.find(t => t.type === 'freq')?.id;
   if (timeId && freqId) {
-    const swapped = [...sIds];
-    const ti = swapped.indexOf(timeId);
-    const fi = swapped.indexOf(freqId);
+    const sw = [...sIds];
+    const ti = sw.indexOf(timeId), fi = sw.indexOf(freqId);
     if (ti !== -1 && fi !== -1) {
-      [swapped[ti], swapped[fi]] = [swapped[fi], swapped[ti]];
-      if (JSON.stringify(swapped) === JSON.stringify(cIds)) return 'timeFreqSwap';
+      [sw[ti], sw[fi]] = [sw[fi], sw[ti]];
+      if (JSON.stringify(sw) === JSON.stringify(cIds)) return 'timeFreqSwap';
     }
   }
 
+  const verbOk = sIds[sIds.length - 1] === cIds[cIds.length - 1];
+
+  if (G.cur.isExistence) {
+    if (!verbOk) return 'wrong';
+
+    /* Check Place に ↔ Subject が swap
+       「[Subject]が [Place]に います」is equally valid in Japanese */
+    const placeId   = G.cur.tiles.find(t => t.type === 'place')?.id;
+    const subjectId = G.cur.tiles.find(t => t.id   === 'subject')?.id;
+    if (placeId && subjectId) {
+      const sw2 = [...sIds];
+      const pi  = sw2.indexOf(placeId);
+      const si  = sw2.indexOf(subjectId);
+      if (pi !== -1 && si !== -1) {
+        [sw2[pi], sw2[si]] = [sw2[si], sw2[pi]];
+        if (JSON.stringify(sw2) === JSON.stringify(cIds)) return 'placeSubjSwap';
+      }
+    }
+
+    /* Verb is last — give flex (middle order partially wrong) */
+    return 'flex';
+  }
+
+  /* Action / Motion sentences */
+  const topicOk = sIds[0] === cIds[0];
   if (topicOk && verbOk) return 'flex';
   return 'wrong';
 }
@@ -1133,14 +1122,12 @@ function render() {
   const used       = new Set(G.placed);
   const isParticle = G.mode === 'particle';
 
-  /* Word bank */
   const bank = document.getElementById('bank');
   bank.innerHTML = '';
   G.cur.shuffled
     .filter(t => !used.has(t.id))
     .forEach(t => bank.appendChild(mkTileEl(t, false)));
 
-  /* Answer zone */
   const az = document.getElementById('aZone');
   az.className = 'ans-zone';
   az.innerHTML = '';
@@ -1169,7 +1156,6 @@ function mkTileEl(tile, inAns, pos) {
   return mkSingleTile(tile, inAns, pos, showBase);
 }
 
-/* [word tile] [particle dropdown] in the answer zone */
 function mkTileGroup(tile, pos) {
   const group = document.createElement('div');
   group.className = 'tile-group';
@@ -1179,7 +1165,6 @@ function mkTileGroup(tile, pos) {
   const isOk = r ? r.particleOk : null;
   group.appendChild(mkParticleSelect(tile, G.done, isOk));
 
-  /* Correct particle shown next to a wrong answer */
   if (G.done && r && r.particleOk === false) {
     const corr = document.createElement('span');
     corr.className = 'p-correct';
@@ -1190,11 +1175,6 @@ function mkTileGroup(tile, pos) {
   return group;
 }
 
-/*
-  Full-inventory <select> dropdown for particle challenge.
-  Starts with a disabled ？ placeholder.
-  Correct answer is always in the full list.
-*/
 function mkParticleSelect(tile, disabled, isOk) {
   const sel = document.createElement('select');
   sel.className = `p-select pt-${tile.type}`;
@@ -1203,7 +1183,6 @@ function mkParticleSelect(tile, disabled, isOk) {
   if (isOk === true)  sel.classList.add('p-ok');
   if (isOk === false) sel.classList.add('p-bad');
 
-  /* Disabled placeholder */
   const ph = document.createElement('option');
   ph.value = '__?__'; ph.textContent = '？'; ph.disabled = true;
   const cur = G.particleState[tile.id];
@@ -1224,11 +1203,9 @@ function mkParticleSelect(tile, disabled, isOk) {
       G.particleState[tile.id] = (v === '__?__') ? null : v;
     });
   }
-
   return sel;
 }
 
-/* The coloured word tile (used in bank, answer zone, and inside tile-groups) */
 function mkSingleTile(tile, inAns, pos, showBase) {
   const d = document.createElement('div');
   d.className = `tile t-${tile.type}`;
@@ -1240,7 +1217,6 @@ function mkSingleTile(tile, inAns, pos, showBase) {
   txt.innerHTML = showBase ? tile.jpBaseRuby : tile.jpRuby;
   d.appendChild(txt);
 
-  /* "?" badge: bank tiles in particle mode that need a particle chosen */
   if (showBase && !inAns) {
     const badge = document.createElement('span');
     badge.className = 'p-badge';
@@ -1263,7 +1239,6 @@ function mkSingleTile(tile, inAns, pos, showBase) {
   } else {
     d.addEventListener('click', () => { if (!G.done) addTile(tile.id); });
   }
-
   return d;
 }
 
@@ -1297,7 +1272,6 @@ function hint() {
   if (G.done) return;
   G.hinted = true;
 
-  /* Case 1: tile still in the bank → pulse the next canonical one */
   const used = new Set(G.placed);
   const nxt  = G.cur.tiles.find(t => !used.has(t.id));
   if (nxt) {
@@ -1310,7 +1284,6 @@ function hint() {
     return;
   }
 
-  /* Case 2: particle mode, all tiles placed → pulse first unchosen dropdown */
   if (G.mode === 'particle') {
     const selects = [...document.querySelectorAll('#aZone .p-select')];
     const unchosen = selects.find(s => {
@@ -1386,14 +1359,24 @@ function checkAns() {
   const cIds        = G.cur.tiles.map(t => t.id);
   const sIds        = [...G.placed];
   const orderResult = getOrderResult(sIds, cIds);
-  const orderOk     = orderResult === 'exact' || orderResult === 'timeFreqSwap';
-  const flex        = orderResult === 'flex';
+
+  /*
+    Full-score order results:
+    • 'exact'        — student matched canonical order exactly
+    • 'timeFreqSwap' — Time and Frequency swapped (both orders natural in Japanese)
+    • 'placeSubjSwap'— Place に and Subject が swapped in existence sentence
+                       (both 「[Place]に [Subject]が」 and 「[Subject]が [Place]に」 valid)
+  */
+  const orderOk = orderResult === 'exact'
+               || orderResult === 'timeFreqSwap'
+               || orderResult === 'placeSubjSwap';
+  const flex    = orderResult === 'flex';
 
   /* ── Per-tile results ── */
   G.tileResults = {};
   sIds.forEach((id, i) => {
-    const tile = G.cur.tiles.find(t => t.id === id);
-    const posOk = (id === cIds[i]);
+    const tile       = G.cur.tiles.find(t => t.id === id);
+    const posOk      = (id === cIds[i]);
     let particleOk   = null;
     let usedWaForObj = false;
 
@@ -1401,20 +1384,18 @@ function checkAns() {
       const sel  = G.particleState[id];
       particleOk = (sel === tile.pChar);
 
-      /*
-        Accept へ as equivalent to に ONLY for motion-verb destinations.
-        Existence verbs use に for location — へ (direction) is not applicable.
-      */
+      /* へ accepted as に for motion-verb destinations (not for existence location) */
       if (!particleOk && tile.type === 'place' && tile.pChar === 'に'
           && sel === 'へ' && !G.cur.isExistence) {
         particleOk = true;
       }
 
       /*
-        Accept は as replacement for を in NEGATIVE sentences.
-        は can replace を to add contrastive nuance (「Xはしません」vs「Xをしません」).
-        Both are grammatically valid; を is the standard direct object marker.
+        Accept は as replacement for を in NEGATIVE sentences (action/motion only).
+        は can replace を to add contrastive nuance: 「Xはしません」= "specifically NOT [verb]'d".
+        Both are grammatically valid; を is the standard marker and is always preferred.
         We accept は here but always explain を in the grammar notes.
+        Note: existence sentences have no object tile, so this branch never fires for them.
       */
       if (!particleOk && tile.type === 'obj' && tile.pChar === 'を'
           && sel === 'は' && G.cur.isNeg) {
@@ -1427,17 +1408,17 @@ function checkAns() {
   });
 
   /*
-    When time and frequency are swapped (both orderings are fully valid),
-    mark ALL position checks as correct so no tiles show a red ring.
+    When the only error is a valid alternative word order (time↔freq or place↔subject),
+    mark ALL tile positions as correct so no tile shows a confusing red ring.
   */
-  if (orderResult === 'timeFreqSwap') {
+  if (orderResult === 'timeFreqSwap' || orderResult === 'placeSubjSwap') {
     sIds.forEach(id => { G.tileResults[id].posOk = true; });
   }
 
   const challenged     = Object.values(G.tileResults).filter(r => r.particleOk !== null);
   const allParticlesOk = challenged.length === 0 || challenged.every(r => r.particleOk);
 
-  /* ── Answer-zone class ── */
+  /* Zone class */
   if (G.mode === 'normal') {
     G.zoneClass = (orderOk || flex) ? 'ok' : 'bad';
   } else {
@@ -1446,10 +1427,7 @@ function checkAns() {
     else                                G.zoneClass = 'bad';
   }
 
-  /* ── Scoring ──
-     Normal   Exact: 10 (7 hint)   Flex: 6 (4 hint)
-     Particle Order: Exact 8 (6) / Flex 5 (3)  +2 per correct particle
-  */
+  /* Scoring */
   let orderScore = 0, particleScore = 0;
   if (G.mode === 'normal') {
     if      (orderOk) orderScore = G.hinted ? 7 : 10;
@@ -1470,7 +1448,6 @@ function checkAns() {
 
   render();
   showFeedback(orderResult, orderOk, flex, pts, orderScore, particleScore, challenged, allParticlesOk);
-
   document.getElementById('bRow').innerHTML =
     '<button class="btn btn-next" onclick="startRound()">Next sentence →</button>';
 }
@@ -1480,30 +1457,30 @@ function checkAns() {
 ════════════════════════════════════════════════════════════════ */
 
 /*
-  getObjNote — returns the grammar note for an object tile.
+  getObjNote — builds the note for an object tile.
 
-  KEY RULE: を is the standard direct object marker and works in all
-  sentence types. In NEGATIVE sentences, は may replace を to signal
-  contrastive emphasis (「Xは[neg. verb]」= "specifically NOT [verb]'d").
-  Both are correct in negative sentences; we accept both and always
-  explain the distinction so students understand the grammar.
+  KEY RULE: を is the standard direct object marker and works in both
+  positive and negative sentences. In NEGATIVE sentences, は may replace
+  を to signal contrastive emphasis (「Xは[neg. verb]」= "specifically NOT
+  [verb]'d"). Both are correct in negative sentences; we accept both
+  here but always explain the distinction so students understand the grammar.
 */
 function getObjNote(tile) {
-  const base    = `を (o) marks the <strong>direct object</strong> of the verb — always correct in both positive and negative sentences.`;
+  if (G.cur.isExistence) return tile.note; // guard — existence has no object tile
+
+  const base    = `を (o) marks the <strong>direct object</strong> of the verb — standard in both positive and negative sentences.`;
   const verbJP  = G.cur.tiles.find(t => t.type === 'verb')?.jp || '…';
   const altForm = `「${tile.jpBase}は${verbJP}」`;
 
   if (!G.cur.isNeg) return base;
 
-  /* Particle challenge: student chose は (accepted alternative) */
   if (G.done && G.mode === 'particle' && G.tileResults?.[tile.id]?.usedWaForObj) {
     return `✓ <strong>は accepted</strong> as the object marker in this negative sentence. ` +
-           `は can replace を in negative sentences for <em>contrastive emphasis</em>: ` +
-           `${altForm} = "${tile.enL} specifically is NOT [verb]'d". ` +
+           `は can replace を for <em>contrastive emphasis</em>: ` +
+           `${altForm} = "${tile.enL} is specifically NOT [verb]'d". ` +
            `<span class="note-alt">⚠️ ${base} を is the standard form and is always preferred in textbooks.</span>`;
   }
 
-  /* Student used を correctly (or we are in normal mode) — add the tip */
   return `${base} ` +
          `<span class="note-alt">💡 In negative sentences, は may also replace を for contrastive nuance — ` +
          `${altForm} is equally natural and is accepted by this game.</span>`;
@@ -1523,17 +1500,16 @@ function showFeedback(orderResult, orderOk, flex, pts, orderScore, particleScore
 
   /* Header */
   if (G.mode === 'normal') {
-    if      (orderResult === 'exact')        h += `<div class="fb-hdr">✅ Perfect! +${pts} pts</div>`;
-    else if (orderResult === 'timeFreqSwap') h += `<div class="fb-hdr">✅ Perfect! +${pts} pts</div>`;
-    else if (orderResult === 'flex')         h += `<div class="fb-hdr">✅ Valid order! +${pts} pts</div>`;
-    else                                     h += `<div class="fb-hdr">❌ Review needed — check the notes below</div>`;
+    if      (orderOk)              h += `<div class="fb-hdr">✅ Perfect! +${pts} pts</div>`;
+    else if (orderResult === 'flex') h += `<div class="fb-hdr">✅ Valid order! +${pts} pts</div>`;
+    else                            h += `<div class="fb-hdr">❌ Review needed — check the notes below</div>`;
   } else {
     if      (G.zoneClass === 'ok')
       h += `<div class="fb-hdr">🎯 Perfect — order and particles! +${pts} pts</div>`;
     else if (orderOk && !allParticlesOk)
       h += `<div class="fb-hdr">⚠️ Correct order, but check the particles! +${pts} pts</div>`;
     else if (flex && allParticlesOk)
-      h += `<div class="fb-hdr">✅ Particles correct! Check word order in the middle. +${pts} pts</div>`;
+      h += `<div class="fb-hdr">✅ Particles correct! Check word order. +${pts} pts</div>`;
     else if (flex)
       h += `<div class="fb-hdr">⚠️ Check word order and particles. +${pts} pts</div>`;
     else if (particleScore > 0)
@@ -1542,7 +1518,7 @@ function showFeedback(orderResult, orderOk, flex, pts, orderScore, particleScore
       h += `<div class="fb-hdr">❌ Review needed — check the notes below</div>`;
   }
 
-  /* Score chips (particle mode) */
+  /* Score chips */
   if (G.mode === 'particle') {
     const cP = challenged.filter(r => r.particleOk).length;
     h += `<div class="fb-score-row">
@@ -1552,22 +1528,19 @@ function showFeedback(orderResult, orderOk, flex, pts, orderScore, particleScore
     </div>`;
   }
 
-  /* Time-Freq swap note */
+  /* Swap notes — explain why either order receives full marks */
   if (orderResult === 'timeFreqSwap') {
     h += `<div class="swap-note">💡 Both <strong>Time → Frequency</strong> and <strong>Frequency → Time</strong> orderings are grammatically natural in Japanese — full marks for either!</div>`;
+  } else if (orderResult === 'placeSubjSwap') {
+    h += `<div class="swap-note">💡 Both 「<strong>[Place]に [Subject]が</strong>」 and 「<strong>[Subject]が [Place]に</strong>」 orderings are grammatically natural in Japanese — full marks for either!</div>`;
   }
 
   /* Correct sentence */
   h += `<p class="fb-note">${orderResult === 'exact' ? 'Your sentence:' : 'Canonical order:'}</p>`;
   h += `<div class="fb-sent">${correctHtml}</div>`;
 
-  /* Order tips */
   if (orderResult === 'wrong') h += buildTips();
-
-  /* Particle results table */
   if (G.mode === 'particle' && challenged.length > 0) h += buildParticleDetail();
-
-  /* Grammar notes */
   h += buildGramNotes();
 
   fb.innerHTML = h;
@@ -1576,12 +1549,35 @@ function showFeedback(orderResult, orderOk, flex, pts, orderScore, particleScore
 function buildTips() {
   const cIds = G.cur.tiles.map(t => t.id);
   const tips = [];
-  if (G.placed[G.placed.length - 1] !== cIds[cIds.length - 1])
-    tips.push('⚠️ The <strong>verb</strong> must be the very last word.');
-  if (G.placed[0] !== cIds[0])
-    tips.push('⚠️ The <strong>topic (subject + は)</strong> must come first.');
-  if (!tips.length)
-    tips.push('ℹ️ Check the middle elements. Genki order: <em>Topic → Time → Frequency → Place → Object → Verb</em>. (Time and Frequency may swap.)');
+
+  if (G.cur.isExistence) {
+    /* Existence sentences: verb-last and place-before-subject */
+    const verbOk = G.placed[G.placed.length - 1] === cIds[cIds.length - 1];
+    if (!verbOk)
+      tips.push('⚠️ The <strong>verb (います / あります)</strong> must be the very last word.');
+
+    const placeId   = G.cur.tiles.find(t => t.type === 'place')?.id;
+    const subjectId = 'subject';
+    if (placeId && G.placed.includes(subjectId) && G.placed.includes(placeId)) {
+      const pi = G.placed.indexOf(placeId);
+      const si = G.placed.indexOf(subjectId);
+      /* Subject placed after place is fine (placeSubjSwap gives full score),
+         so only tip if something else is wrong */
+    }
+
+    if (!tips.length)
+      tips.push('ℹ️ Existence order: <em>Time → Frequency → Place に → Subject が → Verb</em>. ' +
+                'Both 「[Place]に [Subject]が」 and 「[Subject]が [Place]に」 are accepted.');
+  } else {
+    /* Action / Motion sentences */
+    if (G.placed[G.placed.length - 1] !== cIds[cIds.length - 1])
+      tips.push('⚠️ The <strong>verb</strong> must be the very last word.');
+    if (G.placed[0] !== cIds[0])
+      tips.push('⚠️ The <strong>topic (subject + は)</strong> must come first.');
+    if (!tips.length)
+      tips.push('ℹ️ Check the middle elements. Genki order: <em>Topic → Time → Frequency → Place → Object → Verb</em>. (Time and Frequency may swap.)');
+  }
+
   return `<ul class="tip-list">${tips.map(t => `<li>${t}</li>`).join('')}</ul>`;
 }
 
@@ -1605,7 +1601,7 @@ function buildGramNotes() {
   return `<div class="gram">
     <div class="gram-ttl">📝 Grammar Notes</div>
     ${G.cur.tiles.map(t => {
-      /* Object tiles get a special note that handles は/を alternation in negatives */
+      /* Object tiles get a special note handling the は/を alternation in negatives */
       const note = (t.type === 'obj') ? getObjNote(t) : t.note;
       return `<div class="gram-row">
         <span class="gram-jp">${t.jpRuby}</span>
@@ -1627,24 +1623,17 @@ function refreshStats() {
 }
 
 function refreshControls() {
-  /* Mode */
   document.getElementById('ctrlNormal').classList.toggle('active',   G.mode === 'normal');
   document.getElementById('ctrlParticle').classList.toggle('active', G.mode === 'particle');
-
-  /* Chapter */
   ['1-2','3-5','6-9'].forEach(l =>
     document.getElementById('ctrlCh' + l.replace('-','')).classList.toggle('active', G.chapterLevel === l)
   );
-
-  /* Pattern */
   ['All','Action','Motion','Existence'].forEach(p =>
     document.getElementById('ctrl' + p).classList.toggle('active', G.verbPattern === p.toLowerCase())
   );
-
-  /* Banners */
-  document.getElementById('modeHint').style.display   = G.mode === 'particle'           ? 'block' : 'none';
-  document.getElementById('motionHint').style.display = G.verbPattern === 'motion'      ? 'block' : 'none';
-  document.getElementById('existHint').style.display  = G.verbPattern === 'existence'   ? 'block' : 'none';
+  document.getElementById('modeHint').style.display   = G.mode === 'particle'         ? 'block' : 'none';
+  document.getElementById('motionHint').style.display = G.verbPattern === 'motion'    ? 'block' : 'none';
+  document.getElementById('existHint').style.display  = G.verbPattern === 'existence' ? 'block' : 'none';
 }
 
 function toast(msg) {
@@ -1659,18 +1648,14 @@ function toast(msg) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   SENTENCE TYPE LABEL
+   ROUND LIFECYCLE
 ════════════════════════════════════════════════════════════════ */
 
 const SENT_TYPE_LABELS = {
   action:    '⚡ Action sentence',
   motion:    '🏃 Motion sentence (移動)',
-  existence: '📍 Existence sentence (存在)',
+  existence: '📍 Existence: 「[Place]に [Subject]が います / あります」',
 };
-
-/* ════════════════════════════════════════════════════════════════
-   ROUND LIFECYCLE
-════════════════════════════════════════════════════════════════ */
 
 function startRound() {
   G.qNum++;
@@ -1690,10 +1675,7 @@ function startRound() {
   rb.classList.remove('shown');
   rb.textContent = '👁 Show';
 
-  /* Sentence type badge */
-  document.getElementById('sentType').textContent =
-    SENT_TYPE_LABELS[G.cur.sentType] || '';
-
+  document.getElementById('sentType').textContent = SENT_TYPE_LABELS[G.cur.sentType] || '';
   document.getElementById('fb').style.display  = 'none';
   document.getElementById('qStat').textContent = `Q ${G.qNum}`;
   document.getElementById('bRow').innerHTML = `
